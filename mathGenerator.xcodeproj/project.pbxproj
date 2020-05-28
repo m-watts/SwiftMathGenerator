@@ -7,8 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F2ABF136247F4DD100819E5F /* mathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ABF135247F4DD100819E5F /* mathGenerator.swift */; };
+		F2ABF136247F4DD100819E5F /* MathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ABF135247F4DD100819E5F /* MathGenerator.swift */; };
+		F2ABF13D247F4E8E00819E5F /* MathConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ABF13C247F4E8E00819E5F /* MathConfig.swift */; };
+		F2ABF141247F4F7400819E5F /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ABF140247F4F7400819E5F /* Generator.swift */; };
+		F2ABF143247F4FFB00819E5F /* MathExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ABF142247F4FFB00819E5F /* MathExpression.swift */; };
+		F2ABF146247F533400819E5F /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ABF145247F533400819E5F /* Operation.swift */; };
+		F2ABF148247F625700819E5F /* MathElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ABF147247F625700819E5F /* MathElement.swift */; };
+		F2ABF153247F6A6E00819E5F /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ABF152247F6A6E00819E5F /* Tests.swift */; };
+		F2ABF155247F6A6E00819E5F /* libmathGenerator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2ABF132247F4DD100819E5F /* libmathGenerator.a */; };
+		F2ABF15B247F6A7200819E5F /* MathGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ABF14A247F68FD00819E5F /* MathGeneratorTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F2ABF156247F6A6E00819E5F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2ABF12A247F4DD100819E5F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F2ABF131247F4DD100819E5F;
+			remoteInfo = mathGenerator;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		F2ABF130247F4DD100819E5F /* CopyFiles */ = {
@@ -24,7 +42,16 @@
 
 /* Begin PBXFileReference section */
 		F2ABF132247F4DD100819E5F /* libmathGenerator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmathGenerator.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		F2ABF135247F4DD100819E5F /* mathGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mathGenerator.swift; sourceTree = "<group>"; };
+		F2ABF135247F4DD100819E5F /* MathGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathGenerator.swift; sourceTree = "<group>"; };
+		F2ABF13C247F4E8E00819E5F /* MathConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathConfig.swift; sourceTree = "<group>"; };
+		F2ABF140247F4F7400819E5F /* Generator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
+		F2ABF142247F4FFB00819E5F /* MathExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathExpression.swift; sourceTree = "<group>"; };
+		F2ABF145247F533400819E5F /* Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
+		F2ABF147247F625700819E5F /* MathElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathElement.swift; sourceTree = "<group>"; };
+		F2ABF14A247F68FD00819E5F /* MathGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathGeneratorTests.swift; sourceTree = "<group>"; };
+		F2ABF150247F6A6E00819E5F /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2ABF152247F6A6E00819E5F /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		F2ABF154247F6A6E00819E5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +62,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F2ABF14D247F6A6E00819E5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2ABF155247F6A6E00819E5F /* libmathGenerator.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -42,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				F2ABF134247F4DD100819E5F /* mathGenerator */,
+				F2ABF151247F6A6E00819E5F /* Tests */,
 				F2ABF133247F4DD100819E5F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				F2ABF132247F4DD100819E5F /* libmathGenerator.a */,
+				F2ABF150247F6A6E00819E5F /* Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,9 +94,48 @@
 		F2ABF134247F4DD100819E5F /* mathGenerator */ = {
 			isa = PBXGroup;
 			children = (
-				F2ABF135247F4DD100819E5F /* mathGenerator.swift */,
+				F2ABF144247F532700819E5F /* enum */,
+				F2ABF13F247F4F5400819E5F /* config */,
+				F2ABF13E247F4F4900819E5F /* api */,
+				F2ABF135247F4DD100819E5F /* MathGenerator.swift */,
+				F2ABF142247F4FFB00819E5F /* MathExpression.swift */,
 			);
 			path = mathGenerator;
+			sourceTree = "<group>";
+		};
+		F2ABF13E247F4F4900819E5F /* api */ = {
+			isa = PBXGroup;
+			children = (
+				F2ABF140247F4F7400819E5F /* Generator.swift */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		F2ABF13F247F4F5400819E5F /* config */ = {
+			isa = PBXGroup;
+			children = (
+				F2ABF13C247F4E8E00819E5F /* MathConfig.swift */,
+			);
+			path = config;
+			sourceTree = "<group>";
+		};
+		F2ABF144247F532700819E5F /* enum */ = {
+			isa = PBXGroup;
+			children = (
+				F2ABF145247F533400819E5F /* Operation.swift */,
+				F2ABF147247F625700819E5F /* MathElement.swift */,
+			);
+			path = enum;
+			sourceTree = "<group>";
+		};
+		F2ABF151247F6A6E00819E5F /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F2ABF14A247F68FD00819E5F /* MathGeneratorTests.swift */,
+				F2ABF152247F6A6E00819E5F /* Tests.swift */,
+				F2ABF154247F6A6E00819E5F /* Info.plist */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +158,24 @@
 			productReference = F2ABF132247F4DD100819E5F /* libmathGenerator.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		F2ABF14F247F6A6E00819E5F /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2ABF158247F6A6E00819E5F /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				F2ABF14C247F6A6E00819E5F /* Sources */,
+				F2ABF14D247F6A6E00819E5F /* Frameworks */,
+				F2ABF14E247F6A6E00819E5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F2ABF157247F6A6E00819E5F /* PBXTargetDependency */,
+			);
+			name = Tests;
+			productName = Tests;
+			productReference = F2ABF150247F6A6E00819E5F /* Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -93,6 +187,9 @@
 				ORGANIZATIONNAME = "Martin Watts";
 				TargetAttributes = {
 					F2ABF131247F4DD100819E5F = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					F2ABF14F247F6A6E00819E5F = {
 						CreatedOnToolsVersion = 11.5;
 					};
 				};
@@ -111,20 +208,53 @@
 			projectRoot = "";
 			targets = (
 				F2ABF131247F4DD100819E5F /* mathGenerator */,
+				F2ABF14F247F6A6E00819E5F /* Tests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F2ABF14E247F6A6E00819E5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F2ABF12E247F4DD100819E5F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2ABF136247F4DD100819E5F /* mathGenerator.swift in Sources */,
+				F2ABF141247F4F7400819E5F /* Generator.swift in Sources */,
+				F2ABF136247F4DD100819E5F /* MathGenerator.swift in Sources */,
+				F2ABF148247F625700819E5F /* MathElement.swift in Sources */,
+				F2ABF146247F533400819E5F /* Operation.swift in Sources */,
+				F2ABF13D247F4E8E00819E5F /* MathConfig.swift in Sources */,
+				F2ABF143247F4FFB00819E5F /* MathExpression.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2ABF14C247F6A6E00819E5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2ABF153247F6A6E00819E5F /* Tests.swift in Sources */,
+				F2ABF15B247F6A7200819E5F /* MathGeneratorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F2ABF157247F6A6E00819E5F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F2ABF131247F4DD100819E5F /* mathGenerator */;
+			targetProxy = F2ABF156247F6A6E00819E5F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		F2ABF137247F4DD100819E5F /* Debug */ = {
@@ -267,6 +397,42 @@
 			};
 			name = Release;
 		};
+		F2ABF159247F6A6E00819E5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HUY53WF6JP;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.mwatts.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F2ABF15A247F6A6E00819E5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HUY53WF6JP;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.mwatts.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -284,6 +450,15 @@
 			buildConfigurations = (
 				F2ABF13A247F4DD100819E5F /* Debug */,
 				F2ABF13B247F4DD100819E5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2ABF158247F6A6E00819E5F /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2ABF159247F6A6E00819E5F /* Debug */,
+				F2ABF15A247F6A6E00819E5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
