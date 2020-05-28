@@ -19,6 +19,15 @@ class MathGenerator : Generator {
     }
     
     private func generateProblem(config: MathConfig) -> MathExpression {
+        
+        let numElements = Int.random(in: config.numElementsLower ... config.numElementsUpper)
+        
+        
+//        for i in 1 ... numElements {
+//            var expression = MathExpression(lhs: )
+//        }
+        
+        
         return MathExpression(lhs: .Integer(value: 1), rhs: .Integer(value: 2), operation: .addition)
     }
     
