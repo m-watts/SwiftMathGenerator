@@ -7,13 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E790F8DF247FF2DA00D56389 /* MathExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ABF142247F4FFB00819E5F /* MathExpression.swift */; };
+		E790F8E0247FF2DD00D56389 /* MathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ABF135247F4DD100819E5F /* MathGenerator.swift */; };
+		E790F8E1247FF2E000D56389 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ABF140247F4F7400819E5F /* Generator.swift */; };
+		E790F8E2247FF2FE00D56389 /* MathConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ABF13C247F4E8E00819E5F /* MathConfig.swift */; };
+		E790F8E3247FF30100D56389 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ABF145247F533400819E5F /* Operation.swift */; };
+		E790F8E4247FF30300D56389 /* MathElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ABF147247F625700819E5F /* MathElement.swift */; };
+		E790F8E62480575700D56389 /* MathTerm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E790F8E52480575700D56389 /* MathTerm.swift */; };
 		F2ABF136247F4DD100819E5F /* MathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ABF135247F4DD100819E5F /* MathGenerator.swift */; };
 		F2ABF13D247F4E8E00819E5F /* MathConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ABF13C247F4E8E00819E5F /* MathConfig.swift */; };
 		F2ABF141247F4F7400819E5F /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ABF140247F4F7400819E5F /* Generator.swift */; };
 		F2ABF143247F4FFB00819E5F /* MathExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ABF142247F4FFB00819E5F /* MathExpression.swift */; };
 		F2ABF146247F533400819E5F /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ABF145247F533400819E5F /* Operation.swift */; };
 		F2ABF148247F625700819E5F /* MathElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ABF147247F625700819E5F /* MathElement.swift */; };
-		F2ABF153247F6A6E00819E5F /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ABF152247F6A6E00819E5F /* Tests.swift */; };
+		F2ABF153247F6A6E00819E5F /* StaticProblemsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ABF152247F6A6E00819E5F /* StaticProblemsTests.swift */; };
 		F2ABF155247F6A6E00819E5F /* libmathGenerator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2ABF132247F4DD100819E5F /* libmathGenerator.a */; };
 		F2ABF15B247F6A7200819E5F /* MathGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ABF14A247F68FD00819E5F /* MathGeneratorTests.swift */; };
 /* End PBXBuildFile section */
@@ -41,6 +48,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E790F8E52480575700D56389 /* MathTerm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathTerm.swift; sourceTree = "<group>"; };
 		F2ABF132247F4DD100819E5F /* libmathGenerator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmathGenerator.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2ABF135247F4DD100819E5F /* MathGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathGenerator.swift; sourceTree = "<group>"; };
 		F2ABF13C247F4E8E00819E5F /* MathConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathConfig.swift; sourceTree = "<group>"; };
@@ -50,7 +58,7 @@
 		F2ABF147247F625700819E5F /* MathElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathElement.swift; sourceTree = "<group>"; };
 		F2ABF14A247F68FD00819E5F /* MathGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathGeneratorTests.swift; sourceTree = "<group>"; };
 		F2ABF150247F6A6E00819E5F /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F2ABF152247F6A6E00819E5F /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		F2ABF152247F6A6E00819E5F /* StaticProblemsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticProblemsTests.swift; sourceTree = "<group>"; };
 		F2ABF154247F6A6E00819E5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,6 +89,7 @@
 				F2ABF133247F4DD100819E5F /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		F2ABF133247F4DD100819E5F /* Products */ = {
 			isa = PBXGroup;
@@ -99,6 +108,7 @@
 				F2ABF13E247F4F4900819E5F /* api */,
 				F2ABF135247F4DD100819E5F /* MathGenerator.swift */,
 				F2ABF142247F4FFB00819E5F /* MathExpression.swift */,
+				E790F8E52480575700D56389 /* MathTerm.swift */,
 			);
 			path = mathGenerator;
 			sourceTree = "<group>";
@@ -132,7 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				F2ABF14A247F68FD00819E5F /* MathGeneratorTests.swift */,
-				F2ABF152247F6A6E00819E5F /* Tests.swift */,
+				F2ABF152247F6A6E00819E5F /* StaticProblemsTests.swift */,
 				F2ABF154247F6A6E00819E5F /* Info.plist */,
 			);
 			path = Tests;
@@ -231,6 +241,7 @@
 				F2ABF141247F4F7400819E5F /* Generator.swift in Sources */,
 				F2ABF136247F4DD100819E5F /* MathGenerator.swift in Sources */,
 				F2ABF148247F625700819E5F /* MathElement.swift in Sources */,
+				E790F8E62480575700D56389 /* MathTerm.swift in Sources */,
 				F2ABF146247F533400819E5F /* Operation.swift in Sources */,
 				F2ABF13D247F4E8E00819E5F /* MathConfig.swift in Sources */,
 				F2ABF143247F4FFB00819E5F /* MathExpression.swift in Sources */,
@@ -241,8 +252,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2ABF153247F6A6E00819E5F /* Tests.swift in Sources */,
+				E790F8E4247FF30300D56389 /* MathElement.swift in Sources */,
+				E790F8DF247FF2DA00D56389 /* MathExpression.swift in Sources */,
+				E790F8E3247FF30100D56389 /* Operation.swift in Sources */,
+				F2ABF153247F6A6E00819E5F /* StaticProblemsTests.swift in Sources */,
 				F2ABF15B247F6A7200819E5F /* MathGeneratorTests.swift in Sources */,
+				E790F8E0247FF2DD00D56389 /* MathGenerator.swift in Sources */,
+				E790F8E1247FF2E000D56389 /* Generator.swift in Sources */,
+				E790F8E2247FF2FE00D56389 /* MathConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

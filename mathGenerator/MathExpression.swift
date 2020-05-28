@@ -13,35 +13,44 @@ class MathExpression : CustomStringConvertible {
     var lhs: MathElement
     var rhs: MathElement
     var operation: Operation
+    var parenthesis: Bool
     
     
-    init(lhs: MathElement, rhs: MathElement, operation: Operation) {
+    init(lhs: MathElement, rhs: MathElement, operation: Operation, parenthesis: Bool = true) {
         self.lhs = lhs
         self.rhs = rhs
         self.operation = operation
+        self.parenthesis = parenthesis
     }
     
     var description: String {
-        var leftString = ""
-        var rightString = ""
-
-        if case .Expression(_) = lhs{
-            leftString = "(\(lhs))"
-        } else {
-            leftString = lhs.description
-        }
-        if case .Expression(_) = rhs {
-            rightString = "(\(rhs))"
-        } else {
-            rightString = rhs.description
-        }
+        let leftString = formatTerm(element: lhs)
+        let rightString = formatTerm(element: rhs)
         
-        return "\(leftString) \(self.operation.rawValue) \(rightString)"
+        return "\(leftString) \(self.operation.info.printFormat) \(rightString)"
     }
     
     var result : Any? {
-        let format = "\(lhs.nsExpressionFormatString) \(operation.rawValue) \(rhs.nsExpressionFormatString)"
+        let leftString = formatTerm(element: lhs, nsExpressionFormat: true)
+        let rightString = formatTerm(element: rhs, nsExpressionFormat: true)
+        let format = "\(leftString) \(operation.info.nsExpressionFormat) \(rightString)"
         let expr = NSExpression(format: format)
         return expr.expressionValue(with: nil, context: nil)
+    }
+    
+    private func formatTerm(element: MathElement, nsExpressionFormat: Bool = false) -> String {
+        var formattedTerm = ""
+        
+        if case .Expression(let expression) = element{
+            formattedTerm = "\(element)"
+            
+            if expression.parenthesis {
+                formattedTerm = "(\(formattedTerm))"
+            }
+        } else {
+            formattedTerm = nsExpressionFormat ? element.nsExpressionFormatString : element.description
+        }
+        
+        return formattedTerm
     }
 }

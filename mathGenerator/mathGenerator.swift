@@ -11,7 +11,7 @@ class MathGenerator : Generator {
     public func generateProblems(config: MathConfig) -> [MathExpression] {
         var problems = [MathExpression]()
         
-        for i in 1...config.problemAmount {
+        for _ in 1...config.problemAmount {
             problems.append(generateProblem(config: config))
         }
         

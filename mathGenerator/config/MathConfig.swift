@@ -18,7 +18,7 @@ struct MathConfig {
     var allowDecimals : Bool
     var digitsAfterDecimal: Int
     
-    var elementsAmountLower : Int
-    var elementsAmountUpper : Int
+    var numElementsLower : Int
+    var numElementsUpper : Int
     
 }

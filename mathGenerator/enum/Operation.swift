@@ -9,14 +9,31 @@
 import Foundation
 
 enum Operation : String {
-    case addition = "+"
-    case subtraction = "-"
-    case multiplication = "*"
-    case division = "/"
-    case parenthesis = "()"
-    case exponent = "^"
-    case percent = "%"
+    //Simple operations
+    case addition
+    case subtraction
+    case multiplication
+    case division
+    case exponent
     
+    //Special operations
+    case parenthesis
+    case percent
+    case root
+    
+    
+    var info: (printFormat: String, nsExpressionFormat: String) {
+        switch self {
+        case .addition: return ("+", "+")
+        case .subtraction: return ("-", "-")
+        case .multiplication: return ("*", "*")
+        case .division: return ("/", "/")
+        case .parenthesis: return ("()", "()")
+        case .exponent: return ("^", "**")
+        case .percent: return ("%", "%")
+        case .root: return("√", "sqrt")
+        }
+    }
     
     
 }
