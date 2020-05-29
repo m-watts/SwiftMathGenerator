@@ -30,6 +30,13 @@ class MathExpression : CustomStringConvertible {
         return "\(leftString) \(self.operation.info.printFormat) \(rightString)"
     }
     
+    var nsExpressionFormat : String {
+        let leftString = formatTerm(element: lhs, nsExpressionFormat: true)
+        let rightString = formatTerm(element: rhs, nsExpressionFormat: true)
+        return "\(leftString) \(operation.info.nsExpressionFormat) \(rightString)"
+
+    }
+    
     var result : Any? {
         let leftString = formatTerm(element: lhs, nsExpressionFormat: true)
         let rightString = formatTerm(element: rhs, nsExpressionFormat: true)
@@ -42,7 +49,9 @@ class MathExpression : CustomStringConvertible {
         var formattedTerm = ""
         
         if case .Expression(let expression) = element{
-            formattedTerm = "\(element)"
+            
+            
+            formattedTerm = nsExpressionFormat ? expression.nsExpressionFormat : expression.description
             
             if expression.parenthesis {
                 formattedTerm = "(\(formattedTerm))"

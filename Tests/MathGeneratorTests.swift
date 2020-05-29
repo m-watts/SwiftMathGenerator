@@ -65,4 +65,29 @@ class MathGeneratorTests: XCTestCase {
         print(r!)
     }
     
+    
+    func testGenerator() throws {
+        let generator : Generator = SimpleMathGenerator()
+        let operations : [Operation] = [.addition, .subtraction, .multiplication, .division]
+        let config = MathConfig.init(
+            problemAmount: 10,
+            allowedOperations: operations,
+            allowDecimals: false,
+            digitsAfterDecimal: 0,
+            numElementsLower: 1,
+            numElementsUpper: 4)
+
+        
+        
+        let expressions = generator.generateProblems(config: config)
+        
+        for expression in expressions {
+            print("========================")
+            print("\(expression) = \(expression.result!)" )
+            print("\(expression.nsExpressionFormat)")
+        }
+        
+        
+    }
+    
 }
