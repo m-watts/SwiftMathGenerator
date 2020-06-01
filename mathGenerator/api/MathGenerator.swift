@@ -11,5 +11,5 @@ import Foundation
 
 protocol MathGenerator {
     
-    func generateProblems(config: MathConfig) -> [MathExpression]
+    func generateProblems(config: MathConfig) -> [MathProblem]
 }

@@ -67,7 +67,7 @@ class MathGeneratorTests: XCTestCase {
     
     
     func testGenerator() throws {
-        let generator : Generator = SimpleMathGenerator()
+        let generator : MathGenerator = SimpleMathGenerator()
         let operations : [Operation] = [.addition, .subtraction, .multiplication, .division]
         let config = MathConfig.init(
             problemAmount: 10,
@@ -79,12 +79,12 @@ class MathGeneratorTests: XCTestCase {
 
         
         
-        let expressions = generator.generateProblems(config: config)
+        let problems = generator.generateProblems(config: config)
         
-        for expression in expressions {
+        for problem in problems {
             print("========================")
-            print("\(expression) = \(expression.result!)" )
-            print("\(expression.nsExpressionFormat)")
+            print("\(problem) = \(problem.result!)" )
+            print("\(problem.nsExpressionFormat)")
         }
         
         

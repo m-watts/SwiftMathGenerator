@@ -6,10 +6,10 @@
 //  Copyright © 2020 Martin Watts. All rights reserved.
 //
 
-class SimpleMathGenerator : Generator {
+class SimpleMathGenerator : MathGenerator {
 
-    public func generateProblems(config: MathConfig) -> [MathExpression] {
-        var problems = [MathExpression]()
+    public func generateProblems(config: MathConfig) -> [MathProblem] {
+        var problems = [MathProblem]()
         
         for _ in 1...config.problemAmount {
             problems.append(generateProblem(config: config))
@@ -18,15 +18,15 @@ class SimpleMathGenerator : Generator {
         return problems
     }
     
-    private func generateProblem(config: MathConfig) -> MathExpression {
+    private func generateProblem(config: MathConfig) -> MathProblem {
         
         let numElements = Int.random(in: config.numElementsLower ... config.numElementsUpper)
-        
         
         let expression = generateElement(remainingElements: numElements, config: config)
         
         
-        return expression
+        
+        return MathProblem(config: config, lhs: expression)
     }
     
     private func generateElement(remainingElements: Int, config: MathConfig) -> MathExpression {

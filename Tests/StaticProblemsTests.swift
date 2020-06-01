@@ -70,9 +70,6 @@ class StaticProblemsTests: XCTestCase {
     
     func testParenthesisIsFalseExpression() throws {
         let a = MathExpression(lhs: .Expression(expression: MathExpression(lhs: .Integer(value: 2), rhs: .Integer(value: 2), operation: .addition, parenthesis: false)), rhs: .Integer(value: 2), operation: .multiplication)
-
-        
-        print("\(a) = \(a.result!)")
         
         XCTAssert("\(a)" == "2 + 2 * 2")
         XCTAssert("\(a.result!)" == "6")
