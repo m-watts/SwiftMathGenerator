@@ -8,7 +8,10 @@
 
 import Foundation
 
-enum Operation : String {
+enum MathOperation : String {
+    //Case can be none for first element in expression
+    case none
+    
     //Simple operations
     case addition
     case subtraction
@@ -24,6 +27,7 @@ enum Operation : String {
     
     var info: (printFormat: String, nsExpressionFormat: String) {
         switch self {
+        case .none: return("","")
         case .addition: return ("+", "+")
         case .subtraction: return ("-", "-")
         case .multiplication: return ("*", "*")

@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import mathGenerator
 
 class MathGeneratorTests: XCTestCase {
     override func setUpWithError() throws {
@@ -68,7 +69,7 @@ class MathGeneratorTests: XCTestCase {
     
     func testGenerator() throws {
         let generator : MathGenerator = SimpleMathGenerator()
-        let operations : [Operation] = [.addition, .subtraction, .multiplication, .division]
+        let operations : [MathOperation] = [.addition, .subtraction, .multiplication, .division]
         let config = MathConfig.init(
             problemAmount: 10,
             allowedOperations: operations,

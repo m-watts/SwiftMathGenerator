@@ -14,14 +14,14 @@ class MathProblem : CustomStringConvertible {
     var resultSymbol: ResultSymbol?
     
     var type: MathProblemType = .expression
-    var config: MathConfig
+    var details: MathConfig
     
     init(config: MathConfig, lhs: MathExpression, rhs: MathExpression? = nil){
         self.lhs = lhs
         self.rhs = rhs
         //self.resultSymbol = resultSymbol
         self.resultSymbol = nil
-        self.config = config
+        self.details = config
     }
     
     var description: String {

@@ -13,15 +13,18 @@ class MathConfig {
     
     var problemAmount : Int
     
-    var allowedOperations = [Operation]()
+    var allowedOperations = [MathOperation]()
     
     var allowDecimals : Bool
     var digitsAfterDecimal: Int
     
+    var minGenNumberValue: Int = 0
+    var maxGenNumberValue: Int = 999
+    
     var numElementsLower : Int
     var numElementsUpper : Int
     
-    init(problemAmount: Int, allowedOperations: [Operation], allowDecimals: Bool, digitsAfterDecimal: Int, numElementsLower: Int, numElementsUpper: Int){
+    init(problemAmount: Int, allowedOperations: [MathOperation], allowDecimals: Bool, digitsAfterDecimal: Int, numElementsLower: Int, numElementsUpper: Int){
         self.problemAmount = problemAmount
         self.allowedOperations = allowedOperations
         self.allowDecimals = allowDecimals

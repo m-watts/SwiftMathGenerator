@@ -29,6 +29,9 @@ class SimpleMathGenerator : MathGenerator {
         return MathProblem(config: config, lhs: expression)
     }
     
+    /**
+     Generates a math problem based on the configuration.
+     */
     private func generateElement(remainingElements: Int, config: MathConfig) -> MathExpression {
         let remainder : Int = remainingElements - 1
         let e1 : MathElement = .Integer(value: Int.random(in: 0 ... 10))
@@ -48,4 +51,18 @@ class SimpleMathGenerator : MathGenerator {
     }
     
      
+    
+    
+    
+    /**
+     This method generates a random number based on the contents of the config file
+     It will either generate an int or a double with a specified precision
+     */
+    private func generateNumber(_ config: MathConfig) -> MathElement{
+        if(config.allowDecimals){
+            return .Decimal(value: Double.random(in: Double(config.minGenNumberValue) ... Double(config.maxGenNumberValue) ))
+        } else {
+            return .Integer(value: Int.random(in: config.minGenNumberValue ... config.maxGenNumberValue))
+        }
+    }
 }

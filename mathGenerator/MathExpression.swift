@@ -10,13 +10,14 @@ import Foundation
 
 
 class MathExpression : CustomStringConvertible {
+    //var terms: [MathTerm]
     var lhs: MathElement
     var rhs: MathElement
-    var operation: Operation
+    var operation: MathOperation
     var parenthesis: Bool
     
     
-    init(lhs: MathElement, rhs: MathElement, operation: Operation, parenthesis: Bool = true) {
+    init(lhs: MathElement, rhs: MathElement, operation: MathOperation, parenthesis: Bool = false) {
         self.lhs = lhs
         self.rhs = rhs
         self.operation = operation

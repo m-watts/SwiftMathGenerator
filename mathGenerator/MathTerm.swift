@@ -8,8 +8,15 @@
 
 import Foundation
 
-//class MathTerm : CustomStringConvertible {
-//    var coefficient: MathElement
-//    var variable: String
-//    var constant: MathElement
-//}
+class MathTerm : CustomStringConvertible {
+    var operation: MathOperation
+    
+    
+    init(operation: MathOperation){
+        self.operation = operation
+    }
+    
+    var description: String {
+        return "TEST"
+    }
+}

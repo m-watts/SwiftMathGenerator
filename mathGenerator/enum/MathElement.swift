@@ -13,7 +13,7 @@ enum MathElement : CustomStringConvertible {
     case Decimal(value: Double)
     case Percentage(value: Int)
     case Expression(expression: MathExpression)
-    //case Term(term: MathTerm)
+    case Variable(term: String, coefficient: Double?)
     
     var description: String {
         switch self {
@@ -21,6 +21,7 @@ enum MathElement : CustomStringConvertible {
         case .Decimal(let value): return "\(value)"
         case .Percentage(let percentage): return "\(percentage)%"
         case .Expression(let expr): return expr.description
+        case .Variable(let variable, let coefficient): return formatVariable(variable: variable, coefficient: coefficient)
         }
     }
     
@@ -32,7 +33,18 @@ enum MathElement : CustomStringConvertible {
         case .Decimal(let value): return "\(value)"
         case .Percentage(let percentage): return "\(Double(percentage) / 100)"
         case .Expression(let expr): return "\(expr.description)"
+        case .Variable(let variable, let coefficient): return formatVariable(variable: variable, coefficient: coefficient)
         }
+    }
+    
+    func formatVariable(variable: String, coefficient: Double?) -> String{
+        var formattedString = variable
+        
+        if let c = coefficient {
+            formattedString = "\(c)\(formattedString)"
+        }
+        
+        return formattedString
     }
     
 }
