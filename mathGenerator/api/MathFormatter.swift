@@ -11,5 +11,4 @@ import Foundation
 protocol MathFormatter {
     
     func format(problem: MathProblem) -> String
-    
 }

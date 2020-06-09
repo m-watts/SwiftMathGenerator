@@ -69,7 +69,7 @@ class MathGeneratorTests: XCTestCase {
     
     func testGenerator() throws {
         let generator : MathGenerator = SimpleMathGenerator()
-        let operations : [MathOperation] = [.addition, .subtraction, .multiplication, .division]
+        let operations : [(operation: MathOperation, weight: Int)] = [(.addition, 1), (.subtraction, 1), (.multiplication, 1), (.division, 1)]
         let config = MathConfig.init(
             problemAmount: 10,
             allowedOperations: operations,

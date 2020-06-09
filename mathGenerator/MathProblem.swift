@@ -16,28 +16,39 @@ class MathProblem : CustomStringConvertible {
     var type: MathProblemType = .expression
     var details: MathConfig
     
-    init(config: MathConfig, lhs: MathExpression, rhs: MathExpression? = nil){
+    init(config: MathConfig,
+         lhs: MathExpression,
+         rhs: MathExpression? = nil,
+         resultSymbol: ResultSymbol? = nil
+    ){
         self.lhs = lhs
         self.rhs = rhs
-        //self.resultSymbol = resultSymbol
-        self.resultSymbol = nil
+        self.resultSymbol = resultSymbol
         self.details = config
     }
     
     var description: String {
-        let r = resultSymbol != nil ? " \(resultSymbol!.info.printFormat) " : ""
-        let rhs = self.rhs != nil ? "\(self.rhs!.description)" : ""
-        return "\(lhs)\(r)\(rhs)"
+        
+        if let f = details.formatter {
+            return f.format(problem: self)
+        } else {
+            let r = resultSymbol != nil ? " \(resultSymbol!) " : ""
+            let rhs = self.rhs != nil ? "\(self.rhs!)" : ""
+            return "\(lhs)\(r)\(rhs)"
+        }
     }
     
     var nsExpressionFormat : String {
         let r = resultSymbol != nil ? " \(resultSymbol!.info.nsExpressionFormat) " : ""
         let rhs = self.rhs != nil ? "\(self.rhs!.nsExpressionFormat)" : ""
         return "\(lhs.nsExpressionFormat)\(r)\(rhs)"
-
+        
     }
     
     var result : Any? {
+        if let r = rhs {
+            return r.description
+        }
         let format = lhs.nsExpressionFormat
         let expr = NSExpression(format: format)
         return expr.expressionValue(with: nil, context: nil)

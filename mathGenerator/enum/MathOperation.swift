@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum MathOperation : String {
+enum MathOperation : CustomStringConvertible {
     //Case can be none for first element in expression
     case none
     
@@ -39,5 +39,8 @@ enum MathOperation : String {
         }
     }
     
+    var description: String {
+        return self.info.printFormat
+    }
     
 }

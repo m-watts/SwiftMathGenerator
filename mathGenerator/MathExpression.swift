@@ -28,7 +28,7 @@ class MathExpression : CustomStringConvertible {
         let leftString = formatTerm(element: lhs)
         let rightString = formatTerm(element: rhs)
         
-        return "\(leftString) \(self.operation.info.printFormat) \(rightString)"
+        return "\(leftString) \(self.operation) \(rightString)"
     }
     
     var nsExpressionFormat : String {

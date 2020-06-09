@@ -136,11 +136,13 @@ class StaticProblemsTests: XCTestCase {
     func testParenthesisMultiplication() throws {
         let a = MathExpression(
             lhs: .Expression(expression: MathExpression(lhs: .Integer(value: 1), rhs: .Integer(value: 2), operation: .addition, parenthesis: true)),
-            rhs: .Expression(expression: MathExpression(lhs: .Integer(value: 3), rhs: .Integer(value: 5), operation: .addition, parenthesis: true)),
+            rhs: .Expression(expression: MathExpression(lhs: .Integer(value: 3), rhs: .Integer(value: 4), operation: .addition, parenthesis: true)),
             operation: .multiplication)
 
+        print("\(a)")
+        print("\(a.result!)")
         XCTAssert("\(a)" == "(1 + 2) * (3 + 4)")
-        XCTAssert("\(a.result!)" == "27")
+        XCTAssert("\(a.result!)" == "21")
     }
     
     

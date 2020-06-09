@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 protocol MathGenerator {
     
     func generateProblems(config: MathConfig) -> [MathProblem]

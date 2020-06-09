@@ -9,7 +9,7 @@
 import Foundation
 
 
-enum ResultSymbol : String {
+enum ResultSymbol {
     case equal
     case equalLessThan
     case equalGreaterThan
@@ -28,7 +28,11 @@ enum ResultSymbol : String {
         case .notEqualTo: return ("=/=", "=/=")
         }
     }
+}
+
+extension ResultSymbol: CustomStringConvertible {
     
-    
-    
+    var description: String {
+        return self.info.printFormat
+    }
 }

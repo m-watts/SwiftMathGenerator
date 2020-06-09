@@ -13,7 +13,7 @@ class MathConfig {
     
     var problemAmount : Int
     
-    var allowedOperations = [MathOperation]()
+    var allowedOperations = [(operation: MathOperation, weight: Int)]()
     
     var allowDecimals : Bool
     var digitsAfterDecimal: Int
@@ -24,10 +24,13 @@ class MathConfig {
     var numElementsLower : Int
     var numElementsUpper : Int
     
-    init(problemAmount: Int, allowedOperations: [MathOperation], allowDecimals: Bool, digitsAfterDecimal: Int, numElementsLower: Int, numElementsUpper: Int){
+    var formatter: MathFormatter?
+    
+    init(problemAmount: Int, allowedOperations: [(operation: MathOperation, weight: Int )], allowDecimals: Bool, digitsAfterDecimal: Int, numElementsLower: Int, numElementsUpper: Int){
         self.problemAmount = problemAmount
         self.allowedOperations = allowedOperations
         self.allowDecimals = allowDecimals
+        
         self.digitsAfterDecimal = digitsAfterDecimal
         self.numElementsLower = numElementsLower
         self.numElementsUpper = numElementsUpper
