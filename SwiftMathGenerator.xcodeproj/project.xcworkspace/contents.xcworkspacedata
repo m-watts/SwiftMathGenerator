@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:mathGenerator.xcodeproj">
+      location = "self:/Users/watts/Documents/Projects/mathGenerator/SwiftMathGenerator.xcodeproj">
    </FileRef>
 </Workspace>
