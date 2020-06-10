@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import mathGenerator
+@testable import SwiftMathGenerator
 
 class StaticProblemsTests: XCTestCase {
     
@@ -26,7 +26,7 @@ class StaticProblemsTests: XCTestCase {
         XCTAssertEqual("\(a)", "2.2 + 3.7", "Expression must be 2.2 + 3.7")
         XCTAssert("\(a.result!)" == "5.9")
     }
-
+    
     /// Test 234 - 91 = 132
     func testSimpleSubtraction() throws {
         let a = MathExpression(lhs: .Integer(value: 223), rhs: .Integer(value: 91), operation: .subtraction)
@@ -77,7 +77,7 @@ class StaticProblemsTests: XCTestCase {
             lhs: .Expression(expression: MathExpression(lhs: .Integer(value: 2), rhs: .Integer(value: 2), operation: .addition, parenthesis: true)),
             rhs: .Integer(value: 2),
             operation: .multiplication)
-
+        
         
         XCTAssert("\(a)" == "(2 + 2) * 2")
         XCTAssert("\(a.result!)" == "8")
@@ -88,7 +88,7 @@ class StaticProblemsTests: XCTestCase {
             lhs: .Expression(expression: MathExpression(lhs: .Integer(value: 2), rhs: .Integer(value: 2), operation: .addition)),
             rhs: .Integer(value: 2),
             operation: .multiplication)
-
+        
         XCTAssert("\(a)" == "2 + 2 * 2")
         XCTAssert("\(a.result!)" == "6")
     }
@@ -98,7 +98,7 @@ class StaticProblemsTests: XCTestCase {
             lhs: .Expression(expression: MathExpression(lhs: .Integer(value: 293), rhs: .Integer(value: 100), operation: .addition)),
             rhs: .Integer(value: 50),
             operation: .subtraction)
-
+        
         XCTAssert("\(a)" == "293 + 100 - 50")
         XCTAssert("\(a.result!)" == "343")
     }
@@ -108,7 +108,7 @@ class StaticProblemsTests: XCTestCase {
             lhs: .Integer(value: -3),
             rhs: .Integer(value: 44),
             operation: .addition)
-
+        
         XCTAssert("\(a)" == "-3 + 44")
         XCTAssert("\(a.result!)" == "41")
     }
@@ -118,7 +118,7 @@ class StaticProblemsTests: XCTestCase {
             lhs: .Integer(value: 3),
             rhs: .Integer(value: 4),
             operation: .exponent)
-
+        
         XCTAssert("\(a)" == "3 ^ 4")
         XCTAssert("\(a.result!)" == "81")
     }
@@ -128,7 +128,7 @@ class StaticProblemsTests: XCTestCase {
             lhs: .Integer(value: 3),
             rhs: .Expression(expression: MathExpression(lhs: .Integer(value: 2), rhs: .Integer(value: 1), operation: .addition, parenthesis: true)),
             operation: .exponent)
-
+        
         XCTAssert("\(a)" == "3 ^ (2 + 1)")
         XCTAssert("\(a.result!)" == "27")
     }
@@ -138,7 +138,7 @@ class StaticProblemsTests: XCTestCase {
             lhs: .Expression(expression: MathExpression(lhs: .Integer(value: 1), rhs: .Integer(value: 2), operation: .addition, parenthesis: true)),
             rhs: .Expression(expression: MathExpression(lhs: .Integer(value: 3), rhs: .Integer(value: 4), operation: .addition, parenthesis: true)),
             operation: .multiplication)
-
+        
         print("\(a)")
         print("\(a.result!)")
         XCTAssert("\(a)" == "(1 + 2) * (3 + 4)")
@@ -152,8 +152,50 @@ class StaticProblemsTests: XCTestCase {
             lhs: .Integer(value: 3),
             rhs: .Expression(expression: MathExpression(lhs: .Integer(value: 3), rhs: .Integer(value: 3), operation: .exponent)),
             operation: .exponent)
-
+        
         XCTAssert("\(a)" == "3 ^ 3 ^ 3")
         XCTAssert("\(a.result!)" == "19683")
+    }
+    
+    
+    func testRounding() throws {
+        let a = MathExpression(
+            lhs: .Integer(value: 1),
+            rhs: .Integer(value: 3),
+            operation: .division)
+        let c : MathConfig = getBasicConfig()
+        let p : MathProblem = MathProblem(config: c, lhs: a)
+        
+        XCTAssert("\(p)" == "1 / 3")
+        XCTAssert("\(p.result)" == "0.33")
+    }
+    
+    func testRoundingOneDecimal() throws {
+        let a = MathExpression(
+            lhs: .Decimal(value: 0.1),
+            rhs: .Integer(value: 1),
+            operation: .addition)
+        let c : MathConfig = getBasicConfig()
+        let p : MathProblem = MathProblem(config: c, lhs: a)
+        
+        XCTAssert("\(p)" == "0.1 + 1")
+        XCTAssert("\(p.result)" == "1.1")
+    }
+    
+    func testRoundingNoDecimalsInResult() throws {
+        let a = MathExpression(
+            lhs: .Integer(value: 1),
+            rhs: .Integer(value: 1),
+            operation: .division)
+        let c : MathConfig = getBasicConfig()
+        let p : MathProblem = MathProblem(config: c, lhs: a)
+        
+        XCTAssert("\(p)" == "1 / 1")
+        XCTAssert("\(p.result)" == "1")
+    }
+    
+    private func getBasicConfig() -> MathConfig {
+        let operations : [(operation: MathOperation, weight: Int)] = [(.addition, 1), (.subtraction, 1), (.multiplication, 1), (.division, 1)]
+        return MathConfig(problemAmount: 10, allowedOperations: operations, allowDecimals: true, digitsAfterDecimal: 2, numElementsLower: 2, numElementsUpper: 5)
     }
 }

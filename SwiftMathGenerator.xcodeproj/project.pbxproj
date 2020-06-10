@@ -117,6 +117,7 @@
 		F2ABF129247F4DD100819E5F = {
 			isa = PBXGroup;
 			children = (
+				F2D593142490709F003D908F /* Documentation */,
 				F2ABF134247F4DD100819E5F /* SwiftMathGenerator */,
 				F2ABF151247F6A6E00819E5F /* Tests */,
 				F2ABF133247F4DD100819E5F /* Products */,
@@ -185,6 +186,13 @@
 				F2ABF154247F6A6E00819E5F /* Info.plist */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		F2D593142490709F003D908F /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Documentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

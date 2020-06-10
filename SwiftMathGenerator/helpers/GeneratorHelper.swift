@@ -21,6 +21,12 @@ func generateNumber(_ config: MathConfig) -> MathElement {
     }
 }
 
+/**
+ Selects a random Operation (eg. + -  / ) based on allowed operations on the config object
+ Uses the weight on each operation to determine the chance of selecting an operation
+ 
+ Eg. [O(+ , 1 ) , O(- , 2)] means a 2/3 chance of subtraction being selected.
+ */
 func randomOperation(_ config: MathConfig) -> MathOperation {
     let sumOfWeights = config.allowedOperations.map({ $0.weight }).reduce(0, +)
     

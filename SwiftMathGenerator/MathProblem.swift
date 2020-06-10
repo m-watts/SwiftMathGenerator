@@ -45,12 +45,26 @@ class MathProblem : CustomStringConvertible {
         
     }
     
-    var result : Any? {
+    var result : String {
         if let r = rhs {
             return r.description
         }
         let format = lhs.nsExpressionFormat
         let expr = NSExpression(format: format)
-        return expr.expressionValue(with: nil, context: nil)
+        let result = expr.expressionValue(with: nil, context: nil)
+        
+        if let r = result {
+            let d : Double = (r as! Double).rounded(toPlaces: self.details.digitsAfterDecimal)
+            
+            let isInteger = floor(d) == d
+            
+            if isInteger {
+                return String(Int(d))
+            } else {
+                return String(d)
+            }
+        }
+        
+        return "unknown"
     }
 }

@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import mathGenerator
+@testable import SwiftMathGenerator
 
 class MathGeneratorTests: XCTestCase {
     override func setUpWithError() throws {
@@ -66,6 +66,7 @@ class MathGeneratorTests: XCTestCase {
         print(r!)
     }
     
+
     
     func testGenerator() throws {
         let generator : MathGenerator = SimpleMathGenerator()
@@ -84,7 +85,7 @@ class MathGeneratorTests: XCTestCase {
         
         for problem in problems {
             print("========================")
-            print("\(problem) = \(problem.result!)" )
+            print("\(problem) = \(problem.result)" )
             print("\(problem.nsExpressionFormat)")
         }
         
