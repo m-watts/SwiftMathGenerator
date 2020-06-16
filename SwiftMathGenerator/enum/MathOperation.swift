@@ -25,7 +25,7 @@ enum MathOperation : CustomStringConvertible {
     case root
     
     
-    var info: (printFormat: String, nsExpressionFormat: String) {
+    var info : (printFormat: String, nsExpressionFormat: String) {
         switch self {
         case .none: return("","")
         case .addition: return ("+", "+")

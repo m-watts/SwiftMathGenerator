@@ -24,6 +24,7 @@
 		F2ABF16024848DBE00819E5F /* MathProblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ABF15F24848DBE00819E5F /* MathProblem.swift */; };
 		F2ABF16224848ED100819E5F /* ResultSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ABF16124848ED100819E5F /* ResultSymbol.swift */; };
 		F2ABF1672484A58600819E5F /* MathProblemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ABF1662484A58600819E5F /* MathProblemType.swift */; };
+		F2DC2C42249843CA003E81B3 /* MathConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DC2C41249843CA003E81B3 /* MathConstant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		F2ABF15F24848DBE00819E5F /* MathProblem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathProblem.swift; sourceTree = "<group>"; };
 		F2ABF16124848ED100819E5F /* ResultSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSymbol.swift; sourceTree = "<group>"; };
 		F2ABF1662484A58600819E5F /* MathProblemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathProblemType.swift; sourceTree = "<group>"; };
+		F2DC2C41249843CA003E81B3 /* MathConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathConstant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 				F2ABF147247F625700819E5F /* MathElement.swift */,
 				F2ABF16124848ED100819E5F /* ResultSymbol.swift */,
 				F2ABF1662484A58600819E5F /* MathProblemType.swift */,
+				F2DC2C41249843CA003E81B3 /* MathConstant.swift */,
 			);
 			path = enum;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				F2ABF1672484A58600819E5F /* MathProblemType.swift in Sources */,
 				F2ABF148247F625700819E5F /* MathElement.swift in Sources */,
 				E790F8E62480575700D56389 /* MathTerm.swift in Sources */,
+				F2DC2C42249843CA003E81B3 /* MathConstant.swift in Sources */,
 				F2ABF15E24848CC800819E5F /* MathFormatter.swift in Sources */,
 				F2ABF146247F533400819E5F /* MathOperation.swift in Sources */,
 				F2ABF13D247F4E8E00819E5F /* MathConfig.swift in Sources */,

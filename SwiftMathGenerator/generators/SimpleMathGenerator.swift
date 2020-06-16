@@ -34,12 +34,12 @@ class SimpleMathGenerator : MathGenerator {
      */
     private func generateElement(remainingElements: Int, config: MathConfig) -> MathExpression {
         let remainder : Int = remainingElements - 1
-        let e1 : MathElement = .Integer(value: Int.random(in: 0 ... 10))
+        let e1 : MathElement = .Integer(Int.random(in: 0 ... 10))
         let e2 : MathElement
         if remainder == 0 {
             e2 = generateNumber(config);
         } else {
-            e2 = .Expression(expression: generateElement(remainingElements: remainder, config: config))
+            e2 = .Expression(generateElement(remainingElements: remainder, config: config))
         }
         
         let ePos = Bool.random()

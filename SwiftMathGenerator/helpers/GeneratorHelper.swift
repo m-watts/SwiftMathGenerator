@@ -15,9 +15,9 @@ import Foundation
  */
 func generateNumber(_ config: MathConfig) -> MathElement {
     if(config.allowDecimals){
-        return .Decimal(value: Double.random(in: Double(config.minGenNumberValue).rounded(toPlaces: config.digitsAfterDecimal) ... Double(config.maxGenNumberValue).rounded(toPlaces: config.digitsAfterDecimal) ))
+        return .Decimal(Double.random(in: Double(config.minGenNumberValue).rounded(toPlaces: config.digitsAfterDecimal) ... Double(config.maxGenNumberValue).rounded(toPlaces: config.digitsAfterDecimal) ))
     } else {
-        return .Integer(value: Int.random(in: config.minGenNumberValue ... config.maxGenNumberValue))
+        return .Integer(Int.random(in: config.minGenNumberValue ... config.maxGenNumberValue))
     }
 }
 

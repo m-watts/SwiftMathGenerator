@@ -19,15 +19,15 @@ class MathGeneratorTests: XCTestCase {
        }
     
     func testGenerateSimpleMath() throws{
-        let a = MathExpression(lhs: .Integer(value: 2), rhs: .Integer(value: 1), operation: .addition)
-        let b = MathExpression(lhs: .Integer(value: 5), rhs: .Integer(value: 17), operation: .addition)
-        let c = MathExpression(lhs: .Integer(value: 223), rhs: .Integer(value: 91), operation: .subtraction)
-        let d = MathExpression(lhs: .Integer(value: 3), rhs: .Integer(value: 3), operation: .multiplication)
-        let e = MathExpression(lhs: .Integer(value: 10), rhs: .Integer(value: 2), operation: .division)
-        let f = MathExpression(lhs: .Expression(expression: MathExpression(lhs: .Integer(value: 1), rhs: .Integer(value: 2), operation: .addition)), rhs: .Expression(expression: MathExpression(lhs: .Integer(value: 3), rhs: .Integer(value: 4), operation: .addition)), operation: .multiplication)
-        let g = MathExpression(lhs: .Expression(expression: MathExpression(lhs: .Integer(value: 2), rhs: .Integer(value: 2), operation: .addition)), rhs: .Integer(value: 2), operation: .multiplication)
+        let a = MathExpression(lhs: .Integer(2), rhs: .Integer(1), operation: .addition)
+        let b = MathExpression(lhs: .Integer(5), rhs: .Integer(17), operation: .addition)
+        let c = MathExpression(lhs: .Integer(223), rhs: .Integer(91), operation: .subtraction)
+        let d = MathExpression(lhs: .Integer(3), rhs: .Integer(3), operation: .multiplication)
+        let e = MathExpression(lhs: .Integer(10), rhs: .Integer(2), operation: .division)
+        let f = MathExpression(lhs: .Expression(MathExpression(lhs: .Integer(1), rhs: .Integer(2), operation: .addition)), rhs: .Expression(MathExpression(lhs: .Integer( 3), rhs: .Integer(4), operation: .addition)), operation: .multiplication)
+        let g = MathExpression(lhs: .Expression(MathExpression(lhs: .Integer(2), rhs: .Integer(2), operation: .addition)), rhs: .Integer( 2), operation: .multiplication)
         
-        let h = MathExpression(lhs: .Integer(value: 3), rhs: .Integer(value: 2), operation: .exponent)
+        let h = MathExpression(lhs: .Integer( 3), rhs: .Integer( 2), operation: .exponent)
         
         
         print("\(a) = \(a.result!)")
