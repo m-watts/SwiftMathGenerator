@@ -50,6 +50,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8293E07F9805C0EFB1DFB13E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
 		E790F8E52480575700D56389 /* MathTerm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathTerm.swift; sourceTree = "<group>"; };
 		F23D41BC248F25CA00A7BD91 /* LatexEquationFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatexEquationFormatter.swift; sourceTree = "<group>"; };
 		F23D41C1248F2A8C00A7BD91 /* GeneratorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorHelper.swift; sourceTree = "<group>"; };
@@ -123,6 +124,7 @@
 				F2ABF134247F4DD100819E5F /* SwiftMathGenerator */,
 				F2ABF151247F6A6E00819E5F /* Tests */,
 				F2ABF133247F4DD100819E5F /* Products */,
+				8293E07F9805C0EFB1DFB13E /* .gitignore */,
 			);
 			sourceTree = "<group>";
 			usesTabs = 0;
