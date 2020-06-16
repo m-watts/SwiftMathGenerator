@@ -26,7 +26,7 @@ class SimpleMathGenerator : MathGenerator {
         
         
         
-        return MathProblem(config: config, lhs: expression)
+        return MathProblem(config: config, lhs: .Expression(expression))
     }
     
     /**

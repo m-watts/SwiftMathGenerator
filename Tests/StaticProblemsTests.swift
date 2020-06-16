@@ -164,7 +164,7 @@ class StaticProblemsTests: XCTestCase {
             rhs: .Integer(3),
             operation: .division)
         let c : MathConfig = getBasicConfig()
-        let p : MathProblem = MathProblem(config: c, lhs: a)
+        let p : MathProblem = MathProblem(config: c, lhs: .Expression(a))
         
         XCTAssert("\(p)" == "1 / 3")
         XCTAssert("\(p.result)" == "0.33")
@@ -176,7 +176,7 @@ class StaticProblemsTests: XCTestCase {
             rhs: .Integer(1),
             operation: .addition)
         let c : MathConfig = getBasicConfig()
-        let p : MathProblem = MathProblem(config: c, lhs: a)
+        let p : MathProblem = MathProblem(config: c, lhs: .Expression(a))
         
         XCTAssert("\(p)" == "0.1 + 1")
         XCTAssert("\(p.result)" == "1.1")
@@ -188,7 +188,7 @@ class StaticProblemsTests: XCTestCase {
             rhs: .Integer(1),
             operation: .division)
         let c : MathConfig = getBasicConfig()
-        let p : MathProblem = MathProblem(config: c, lhs: a)
+        let p : MathProblem = MathProblem(config: c, lhs: .Expression(a))
         
         XCTAssert("\(p)" == "1 / 1")
         XCTAssert("\(p.result)" == "1")
@@ -200,7 +200,7 @@ class StaticProblemsTests: XCTestCase {
             rhs: .Constant(.pi),
             operation: .addition)
         let c : MathConfig = getBasicConfig()
-        let p : MathProblem = MathProblem(config: c, lhs: a)
+        let p : MathProblem = MathProblem(config: c, lhs: .Expression(a))
         
         XCTAssert("\(p)" == "0 + π")
         XCTAssert("\(p.result)" == "3.14")

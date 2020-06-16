@@ -9,16 +9,16 @@
 import Foundation
 
 class MathProblem : CustomStringConvertible {
-    var lhs: MathExpression
-    var rhs: MathExpression?
+    var lhs: MathElement
+    var rhs: MathElement?
     var resultSymbol: ResultSymbol?
     
     var type: MathProblemType = .expression
     var details: MathConfig
     
     init(config: MathConfig,
-         lhs: MathExpression,
-         rhs: MathExpression? = nil,
+         lhs: MathElement,
+         rhs: MathElement? = nil,
          resultSymbol: ResultSymbol? = nil
     ){
         self.lhs = lhs
@@ -40,8 +40,8 @@ class MathProblem : CustomStringConvertible {
     
     var nsExpressionFormat : String {
         let r = resultSymbol != nil ? " \(resultSymbol!.info.nsExpressionFormat) " : ""
-        let rhs = self.rhs != nil ? "\(self.rhs!.nsExpressionFormat)" : ""
-        return "\(lhs.nsExpressionFormat)\(r)\(rhs)"
+        let rhs = self.rhs != nil ? "\(self.rhs!.nsExpressionFormatString)" : ""
+        return "\(lhs.nsExpressionFormatString)\(r)\(rhs)"
         
     }
     
@@ -49,7 +49,7 @@ class MathProblem : CustomStringConvertible {
         if let r = rhs {
             return r.description
         }
-        let format = lhs.nsExpressionFormat
+        let format = lhs.nsExpressionFormatString
         let expr = NSExpression(format: format)
         let result = expr.expressionValue(with: nil, context: nil)
         

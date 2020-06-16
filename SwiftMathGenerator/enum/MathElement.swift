@@ -34,7 +34,7 @@ enum MathElement : CustomStringConvertible {
         case .Integer(let value): return "\(value).0"
         case .Decimal(let value): return "\(value)"
         case .Percentage(let percentage): return "\(Double(percentage) / 100)"
-        case .Expression(let expr): return "\(expr.description)"
+        case .Expression(let expr): return "\(expr.nsExpressionFormat)"
         case .Variable(let variable, let coefficient): return formatVariable(variable: variable, coefficient: coefficient)
         case .Constant(let value): return "\(value.info.nsExpressionFormat)"
         }
