@@ -11,8 +11,8 @@ import Foundation
 
 enum ResultSymbol {
     case equal
-    case equalLessThan
-    case equalGreaterThan
+    case lessThanOrEqual
+    case greaterThanOrEqual
     case lessThan
     case greaterThan
     case notEqualTo
@@ -21,8 +21,8 @@ enum ResultSymbol {
     var info: (printFormat: String, nsExpressionFormat: String) {
         switch self {
         case .equal: return ("=", "=")
-        case .equalLessThan: return ("=<", "=<")
-        case .equalGreaterThan: return (">=", ">=")
+        case .lessThanOrEqual: return ("=<", "=<")
+        case .greaterThanOrEqual: return (">=", ">=")
         case .lessThan: return ("<", "<")
         case .greaterThan: return (">", ">")
         case .notEqualTo: return ("=/=", "=/=")

@@ -20,6 +20,7 @@ enum MathOperation : CustomStringConvertible {
     case exponent
     
     //Special operations
+    case fraction
     case parenthesis
     case percent
     case root
@@ -36,6 +37,7 @@ enum MathOperation : CustomStringConvertible {
         case .exponent: return ("^", "**")
         case .percent: return ("%", "%")
         case .root: return("√", "sqrt")
+        case .fraction: return("/","/")
         }
     }
     

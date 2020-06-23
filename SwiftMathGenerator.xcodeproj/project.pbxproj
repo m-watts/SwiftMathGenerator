@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		E790F8E62480575700D56389 /* MathTerm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E790F8E52480575700D56389 /* MathTerm.swift */; };
-		F23D41BD248F25CA00A7BD91 /* LatexEquationFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23D41BC248F25CA00A7BD91 /* LatexEquationFormatter.swift */; };
+		F23D41BD248F25CA00A7BD91 /* LatexFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23D41BC248F25CA00A7BD91 /* LatexFormatter.swift */; };
 		F23D41C2248F2A8C00A7BD91 /* GeneratorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23D41C1248F2A8C00A7BD91 /* GeneratorHelper.swift */; };
 		F23D41C4248F370D00A7BD91 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23D41C3248F370D00A7BD91 /* Double+Extension.swift */; };
+		F28A006A24A1928A008181F4 /* LatexFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28A006924A1928A008181F4 /* LatexFormatterTests.swift */; };
 		F2ABF136247F4DD100819E5F /* SimpleMathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ABF135247F4DD100819E5F /* SimpleMathGenerator.swift */; };
 		F2ABF13D247F4E8E00819E5F /* MathConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ABF13C247F4E8E00819E5F /* MathConfig.swift */; };
 		F2ABF141247F4F7400819E5F /* MathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ABF140247F4F7400819E5F /* MathGenerator.swift */; };
@@ -52,9 +53,10 @@
 /* Begin PBXFileReference section */
 		8293E07F9805C0EFB1DFB13E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
 		E790F8E52480575700D56389 /* MathTerm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathTerm.swift; sourceTree = "<group>"; };
-		F23D41BC248F25CA00A7BD91 /* LatexEquationFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatexEquationFormatter.swift; sourceTree = "<group>"; };
+		F23D41BC248F25CA00A7BD91 /* LatexFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatexFormatter.swift; sourceTree = "<group>"; };
 		F23D41C1248F2A8C00A7BD91 /* GeneratorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorHelper.swift; sourceTree = "<group>"; };
 		F23D41C3248F370D00A7BD91 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
+		F28A006924A1928A008181F4 /* LatexFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatexFormatterTests.swift; sourceTree = "<group>"; };
 		F2ABF132247F4DD100819E5F /* libSwiftMathGenerator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSwiftMathGenerator.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2ABF135247F4DD100819E5F /* SimpleMathGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleMathGenerator.swift; sourceTree = "<group>"; };
 		F2ABF13C247F4E8E00819E5F /* MathConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathConfig.swift; sourceTree = "<group>"; };
@@ -95,7 +97,7 @@
 		F23D41BE248F29D700A7BD91 /* formatters */ = {
 			isa = PBXGroup;
 			children = (
-				F23D41BC248F25CA00A7BD91 /* LatexEquationFormatter.swift */,
+				F23D41BC248F25CA00A7BD91 /* LatexFormatter.swift */,
 			);
 			path = formatters;
 			sourceTree = "<group>";
@@ -189,6 +191,7 @@
 				F2ABF14A247F68FD00819E5F /* MathGeneratorTests.swift */,
 				F2ABF152247F6A6E00819E5F /* StaticProblemsTests.swift */,
 				F2ABF154247F6A6E00819E5F /* Info.plist */,
+				F28A006924A1928A008181F4 /* LatexFormatterTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -294,7 +297,7 @@
 				F2ABF16024848DBE00819E5F /* MathProblem.swift in Sources */,
 				F23D41C4248F370D00A7BD91 /* Double+Extension.swift in Sources */,
 				F2ABF136247F4DD100819E5F /* SimpleMathGenerator.swift in Sources */,
-				F23D41BD248F25CA00A7BD91 /* LatexEquationFormatter.swift in Sources */,
+				F23D41BD248F25CA00A7BD91 /* LatexFormatter.swift in Sources */,
 				F2ABF1672484A58600819E5F /* MathProblemType.swift in Sources */,
 				F2ABF148247F625700819E5F /* MathElement.swift in Sources */,
 				E790F8E62480575700D56389 /* MathTerm.swift in Sources */,
@@ -313,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2ABF153247F6A6E00819E5F /* StaticProblemsTests.swift in Sources */,
+				F28A006A24A1928A008181F4 /* LatexFormatterTests.swift in Sources */,
 				F2ABF15B247F6A7200819E5F /* MathGeneratorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
