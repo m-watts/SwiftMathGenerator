@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E790F8E62480575700D56389 /* MathTerm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E790F8E52480575700D56389 /* MathTerm.swift */; };
 		F23D41BD248F25CA00A7BD91 /* LatexFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23D41BC248F25CA00A7BD91 /* LatexFormatter.swift */; };
 		F23D41C2248F2A8C00A7BD91 /* GeneratorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23D41C1248F2A8C00A7BD91 /* GeneratorHelper.swift */; };
 		F23D41C4248F370D00A7BD91 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23D41C3248F370D00A7BD91 /* Double+Extension.swift */; };
@@ -52,7 +51,6 @@
 
 /* Begin PBXFileReference section */
 		8293E07F9805C0EFB1DFB13E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
-		E790F8E52480575700D56389 /* MathTerm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathTerm.swift; sourceTree = "<group>"; };
 		F23D41BC248F25CA00A7BD91 /* LatexFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatexFormatter.swift; sourceTree = "<group>"; };
 		F23D41C1248F2A8C00A7BD91 /* GeneratorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorHelper.swift; sourceTree = "<group>"; };
 		F23D41C3248F370D00A7BD91 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
@@ -151,7 +149,6 @@
 				F23D41C0248F2A6500A7BD91 /* helpers */,
 				F2ABF15F24848DBE00819E5F /* MathProblem.swift */,
 				F2ABF142247F4FFB00819E5F /* MathExpression.swift */,
-				E790F8E52480575700D56389 /* MathTerm.swift */,
 			);
 			path = SwiftMathGenerator;
 			sourceTree = "<group>";
@@ -300,7 +297,6 @@
 				F23D41BD248F25CA00A7BD91 /* LatexFormatter.swift in Sources */,
 				F2ABF1672484A58600819E5F /* MathProblemType.swift in Sources */,
 				F2ABF148247F625700819E5F /* MathElement.swift in Sources */,
-				E790F8E62480575700D56389 /* MathTerm.swift in Sources */,
 				F2DC2C42249843CA003E81B3 /* MathConstant.swift in Sources */,
 				F2ABF15E24848CC800819E5F /* MathFormatter.swift in Sources */,
 				F2ABF146247F533400819E5F /* MathOperation.swift in Sources */,
