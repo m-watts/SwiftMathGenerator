@@ -16,6 +16,7 @@ struct LatexFormatter : MathFormatter {
         let lhs = formatElement(problem.lhs)
         let r = problem.resultSymbol != nil ? formatSymbol(problem.resultSymbol!) : ""
         let rhs = problem.rhs != nil ? formatElement(problem.rhs!) : ""
+                
         return "\(lhs)\(r)\(rhs)"
     }
     
@@ -35,10 +36,16 @@ struct LatexFormatter : MathFormatter {
         let rhs = formatElement(expression.rhs)
         
         let o = formatSymbol(expression.operation)
+       
+        let e = o
+        .replacingOccurrences(of: "{0}", with: lhs)
+        .replacingOccurrences(of: "{1}", with: rhs)
         
-        return o
-            .replacingOccurrences(of: "{0}", with: lhs)
-            .replacingOccurrences(of: "{1}", with: rhs)
+        if expression.parenthesis {
+            return "(\(e)"
+        } else {
+            return e
+        }
     }
     
     private func formatSymbol(_ resultSymbol: ResultSymbol) -> String {

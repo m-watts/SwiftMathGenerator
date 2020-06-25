@@ -55,6 +55,7 @@
 		F23D41C1248F2A8C00A7BD91 /* GeneratorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorHelper.swift; sourceTree = "<group>"; };
 		F23D41C3248F370D00A7BD91 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		F28A006924A1928A008181F4 /* LatexFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatexFormatterTests.swift; sourceTree = "<group>"; };
+		F2980C7724A43EEE00C73413 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		F2ABF132247F4DD100819E5F /* libSwiftMathGenerator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSwiftMathGenerator.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2ABF135247F4DD100819E5F /* SimpleMathGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleMathGenerator.swift; sourceTree = "<group>"; };
 		F2ABF13C247F4E8E00819E5F /* MathConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathConfig.swift; sourceTree = "<group>"; };
@@ -120,6 +121,7 @@
 		F2ABF129247F4DD100819E5F = {
 			isa = PBXGroup;
 			children = (
+				F2980C7724A43EEE00C73413 /* README.md */,
 				F2D593142490709F003D908F /* Documentation */,
 				F2ABF134247F4DD100819E5F /* SwiftMathGenerator */,
 				F2ABF151247F6A6E00819E5F /* Tests */,
