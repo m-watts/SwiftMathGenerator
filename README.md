@@ -41,12 +41,6 @@ for problem in problems {
 }
 ```
 
-## Author
-SwiftMathGenerator was createdd by Martin Watts, a Senior Lead iOS engineer at CRi Solutions. CRi is a leader in developing cutting edge iOS, Android, and mobile web applications and solutions for our corporate and financial clients.
-
-Email: mlong@clientresourcesinc.com
-Twitter: @hmlco
-
 ## License 
 
 SwiftMathGenerator is available under the MIT license. See the LICENSE file for more info.
